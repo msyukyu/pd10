@@ -6,7 +6,7 @@
 #    By: dabeloos <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/24 09:39:11 by dabeloos          #+#    #+#              #
-#    Updated: 2018/08/24 11:21:16 by dabeloos         ###   ########.fr        #
+#    Updated: 2018/08/26 14:55:09 by dabeloos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,10 @@ C_FILES		= srcs/ft_putchar.c srcs/ft_putstr.c srcs/ft_strcmp.c \
 
 O_FILES		= ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
 
+FLAGS		= -c -Wall -Wextra -Werror
+
 $(NAME):
-			gcc -c -Wall -Werror -Wextra $(C_FILES) -I/$(H_FOLDER)
+			gcc $(FLAGS) $(C_FILES) -I/$(H_FOLDER)
 			ar -rcs $(NAME) $(O_FILES)
 
 all:		$(NAME)
