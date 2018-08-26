@@ -6,7 +6,7 @@
 /*   By: dabeloos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 13:59:57 by dabeloos          #+#    #+#             */
-/*   Updated: 2018/08/26 17:40:48 by dabeloos         ###   ########.fr       */
+/*   Updated: 2018/08/26 18:08:28 by dabeloos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,19 @@ void	ft_putstr(char *str)
 	i = -1;
 	while (str[++i] != '\0')
 		ft_putchar(str[i]);
+}
+
+int		ft_strcmp(char *s1, char *s2)
+{
+	int i;
+	int cmp;
+
+	i = 0;
+	cmp = 0;
+	while (s1[i] != '\0' && s2[i] != '\0' && cmp == 0)
+	{
+		cmp = s1[i] - s2[i];
+		i++;
+	}
+	return ((cmp == 0) ? s1[i] - s2[i] : cmp);
 }
