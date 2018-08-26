@@ -6,7 +6,7 @@
 /*   By: dabeloos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 16:52:03 by dabeloos          #+#    #+#             */
-/*   Updated: 2018/08/24 16:54:01 by dabeloos         ###   ########.fr       */
+/*   Updated: 2018/08/26 14:14:25 by dabeloos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		ft_sub(int a, int b)
 	return (a - b);
 }
 
-int		ft_mult(int a, int b)
+int		ft_mul(int a, int b)
 {
 	return (a * b);
 }
