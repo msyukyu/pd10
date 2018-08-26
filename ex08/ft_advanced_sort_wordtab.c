@@ -6,26 +6,11 @@
 /*   By: dabeloos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 17:24:33 by dabeloos          #+#    #+#             */
-/*   Updated: 2018/08/26 17:37:42 by dabeloos         ###   ########.fr       */
+/*   Updated: 2018/08/26 17:38:40 by dabeloos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
-{
-	int i;
-	int cmp;
-
-	i = 0;
-	cmp = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && cmp == 0)
-	{
-		cmp = s1[i] - s2[i];
-		i++;
-	}
-	return ((cmp == 0) ? s1[i] - s2[i] : cmp);
-}
-
-void	ft_sort_wordtab(char **tab)
+void	ft_advanced_sort_wordtab(char **tab, int (*cmp)(char *, char *))
 {
 	int		i;
 	int		j;
@@ -40,7 +25,7 @@ void	ft_sort_wordtab(char **tab)
 		i = 0;
 		while (i < j - 1)
 		{
-			if (ft_strcmp(tab[i], tab[i + 1]) > 0)
+			if (cmp(tab[i], tab[i + 1]) > 0)
 			{
 				str = tab[i];
 				tab[i] = tab[i + 1];
