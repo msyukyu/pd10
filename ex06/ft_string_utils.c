@@ -6,7 +6,7 @@
 /*   By: dabeloos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 13:59:57 by dabeloos          #+#    #+#             */
-/*   Updated: 2018/08/26 14:05:13 by dabeloos         ###   ########.fr       */
+/*   Updated: 2018/08/26 17:19:31 by dabeloos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		ft_atoi(char *str)
 
 void	ft_putchar(char c)
 {
-	write(1, &c, c);
+	write(1, &c, 1);
 }
 
 void	ft_putnbr(int nb)
